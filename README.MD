@@ -1,69 +1,15 @@
-#### Setup
+**This Project is made under the guidance OF John Smilga sir***
 
-```bash
-npm install && npm start
-```
-
-#### Database Connection
-
-1. Import connect.js
-2. Invoke in start()
-3. Setup .env in the root
-4. Add MONGO_URI with correct value
-
-#### Routers
-
-- auth.js
-- jobs.js
-
-#### User Model
-
-Email Validation Regex
-
-```regex
-/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-```
-
-#### Register User
-
-- Validate - name, email, password - with Mongoose
-- Hash Password (with bcryptjs)
-- Save User
-- Generate Token
-- Send Response with Token
-
-#### Login User
-
-- Validate - email, password - in controller
-- If email or password is missing, throw BadRequestError
-- Find User
-- Compare Passwords
-- If no user or password does not match, throw UnauthenticatedError
-- If correct, generate Token
-- Send Response with Token
-
-#### Mongoose Errors
-
-- Validation Errors
-- Duplicate (Email)
-- Cast Error
-
-#### Security
-
-- helmet
-- cors
-- xss-clean
-- express-rate-limit
-
-Swagger UI
-
-```yaml
-/jobs/{id}:
-  parameters:
-    - in: path
-      name: id
-      schema:
-        type: string
-      required: true
-      description: the job id
-```
+TO RUN THE FILE :- npm install && npm run
+This is a simple Job-API made using NodeJs,Express, Mongoose ,for database we are going with MongoDB and for documentation we used SwaggerUI
+For hashing password we are using BcryptJs.
+Some extra packages used are->cors,helmet,rate-limiter,xss-clean
+PACKAGES USED(IMPORTANT)
+express-async-errors->A  simple ES6 async/await support hack for ExpressJS.
+express-rate-limit->Basic rate-limiting middleware for Express whhich is used to limit repeated requests to public APIs and/or endpoints such as password reset.
+http-status-codes->utility to interact with the status codes
+Joi-used for object schema validation
+JSON webtoken->JSON Web Token is a proposed Internet standard for creating data with optional signature and/or optional encryption whose payload holds .
+Mongoose-Mongoose is a JavaScript object-oriented programming library that creates a connection between MongoDB and the Node.js JavaScript runtime environment.
+SwaggerUI->For documentation
+Yamljs->It is commonly used for configuration files and in applications where data is being stored or transmitted.
