@@ -1,4 +1,4 @@
-**This Project is made under the guidance OF John Smilga sir***
+
 
 TO RUN THE FILE :- npm install && npm run
 
